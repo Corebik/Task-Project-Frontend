@@ -5,8 +5,8 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 const initialValues: UserLoginForm = {
-   email: '',
-   password: '',
+   email: 'admin@redux.com',
+   password: 'password',
 };
 
 export const LoginPage = () => {
@@ -27,11 +27,7 @@ export const LoginPage = () => {
             Comienza a planear tus proyectos {''}
             <span className=" text-fuchsia-500 font-bold"> Iniciando Sesión</span>
          </p>
-         <form
-            onSubmit={handleSubmit(handleLogin)}
-            className="space-y-8 p-10 mt-10 bg-white"
-            noValidate
-         >
+         <form onSubmit={handleSubmit(handleLogin)} className="space-y-8 p-10 mt-10 bg-white" noValidate>
             <div className="flex flex-col gap-5">
                <label className="font-normal text-2xl">Email</label>
 
@@ -74,16 +70,10 @@ export const LoginPage = () => {
 
          <nav className="mt-10 flex flex-col space-y-2">
             <Link to={'/auth/register'} className="text-center text-gray-300 font-normal">
-               ¿No tienes una cuenta?{' '}
-               <span className="text-fuchsia-600 font-bold hover:text-fuchsia-700 duration-300">
-                  Registrate
-               </span>
+               ¿No tienes una cuenta? <span className="text-fuchsia-600 font-bold hover:text-fuchsia-700 duration-300">Registrate</span>
             </Link>
             <Link to={'/auth/forgot-password'} className="text-center text-gray-300 font-normal">
-               ¿Olvidaste tu contraseña?{' '}
-               <span className="text-fuchsia-600 font-bold hover:text-fuchsia-700 duration-300">
-                  Reestablecer
-               </span>
+               ¿Olvidaste tu contraseña? <span className="text-fuchsia-600 font-bold hover:text-fuchsia-700 duration-300">Reestablecer</span>
             </Link>
          </nav>
       </>
